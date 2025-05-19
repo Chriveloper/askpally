@@ -1,4 +1,3 @@
 export const languages = {
-    en: "English",
-    fr: "Français",
+    de: "Deutsch", // Set German as the only language
 };

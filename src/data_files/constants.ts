@@ -1,14 +1,12 @@
-import ogImageSrc from "@images/social.png";
-
-
+const ogImageSrc = "/askpally-social.webp";
 
 export const SITE = {
-  title: "ScrewFast",
-  tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  title: "AskPally",
+  tagline: "Jede Frage verdient eine Antwort – Faire Chancen für neugierige Entdecker.",
+  description: "AskPally: Der interaktive, sprechende Plüsch-Lernbegleiter für Kinder von 3-8 Jahren. Fördert Sprachentwicklung, Lernfreude und Neugier – ganz ohne Bildschirm. Mit Begleit-App für Eltern.",
+  description_short: "AskPally: Interaktiver Plüsch-Lernbegleiter für Kinder (3-8 J.). Bildschirmfrei lernen.",
+  url: "https://askpally.de",
+  author: "AskPally Team",
 };
 
 export const SEO = {
@@ -17,7 +15,7 @@ export const SEO = {
   structuredData: {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    inLanguage: "en-US",
+    inLanguage: "de-DE",
     "@id": SITE.url,
     url: SITE.url,
     name: SITE.title,
@@ -32,11 +30,11 @@ export const SEO = {
 };
 
 export const OG = {
-  locale: "en_US",
+  locale: "de_DE",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  title: `AskPally: ${SITE.tagline}`,
+  description: "Entdecke AskPally, den sprechenden Lernfreund, der Kinder spielerisch fördert und Bildungschancen gerechter macht. Mehr erfahren!",
   image: ogImageSrc,
 };
 
