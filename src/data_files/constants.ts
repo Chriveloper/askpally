@@ -1,12 +1,23 @@
-const ogImageSrc = "/askpally-social.webp";
-
 export const SITE = {
+  name: "AskPally",
   title: "AskPally",
-  tagline: "Jede Frage verdient eine Antwort – Faire Chancen für neugierige Entdecker.",
-  description: "AskPally: Der interaktive, sprechende Plüsch-Lernbegleiter für Kinder von 3-8 Jahren. Fördert Sprachentwicklung, Lernfreude und Neugier – ganz ohne Bildschirm. Mit Begleit-App für Eltern.",
-  description_short: "AskPally: Interaktiver Plüsch-Lernbegleiter für Kinder (3-8 J.). Bildschirmfrei lernen.",
+  description: "AskPally: Jede Frage verdient eine Antwort – Faire Chancen für neugierige Entdecker.",
   url: "https://askpally.de",
-  author: "AskPally Team",
+  githubUrl: "https://github.com/mearashadowfax/AskPallyWebsite", // Update if you have a specific repo for this version
+  image: "/social.png", // Replace with your actual social sharing image
+  favicon: "/favicon.ico", // Ensure this exists or update path
+  author: "Christian Liu", // Update with your name/company
+  currentPostingLanguage: "de-DE", // Set to German
+  currentPostingLanguageAlternate: "", // No alternate language
+};
+
+export const OG = {
+  locale: "de_DE", // Set to German
+  type: "website",
+  url: SITE.url,
+  title: `${SITE.title}: Kuschel dich klug.`,
+  description: SITE.description,
+  image: SITE.image,
 };
 
 export const SEO = {
@@ -14,28 +25,13 @@ export const SEO = {
   description: SITE.description,
   structuredData: {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    inLanguage: "de-DE",
-    "@id": SITE.url,
+    "@type": "WebSite",
+    name: SITE.name,
     url: SITE.url,
-    name: SITE.title,
     description: SITE.description,
-    isPartOf: {
-      "@type": "WebSite",
-      url: SITE.url,
-      name: SITE.title,
-      description: SITE.description,
-    },
+    image: SITE.image,
+    inLanguage: "de-DE", // Set to German
   },
-};
-
-export const OG = {
-  locale: "de_DE",
-  type: "website",
-  url: SITE.url,
-  title: `AskPally: ${SITE.tagline}`,
-  description: "Entdecke AskPally, den sprechenden Lernfreund, der Kinder spielerisch fördert und Bildungschancen gerechter macht. Mehr erfahren!",
-  image: ogImageSrc,
 };
 
 export const partnersData = [
