@@ -35,25 +35,9 @@ export const footerLinks: FooterLinkSection[] = [
   {
     section: "AskPally",
     links: [
-      { name: "Was ist AskPally?", url: "/ueber-askpally#was-ist-askpally" },
+      { name: "Über AskPally", url: "/ueber-askpally" },
       { name: "Vorteile", url: "/ueber-askpally#vorteile" },
-      { name: "Für Eltern", url: "/fuer-eltern" }, // For Parents (new page)
-    ],
-  },
-  {
-    section: "Unternehmen",
-    links: [
-      { name: "Blog", url: "/blog" },
-      { name: "Presse", url: "/presse" }, // Press (new page)
-      { name: "Karriere", url: "/karriere" }, // Careers (new page)
-    ],
-  },
-  {
-    section: "Rechtliches", // Legal
-    links: [
-      { name: "Impressum", url: "/impressum" }, // Imprint (new page)
-      { name: "Datenschutz", url: "/datenschutz" }, // Privacy (new page)
-      { name: "AGB", url: "/agb" }, // Terms & Conditions (new page)
+      { name: "Für Eltern", url: "/fuer-eltern" },
     ],
   },
 ];
@@ -62,7 +46,7 @@ export const footerLinks: FooterLinkSection[] = [
 export const socialLinks: SocialLinks = {
   facebook: "#", // Add your Facebook URL
   twitter: "#", // Add your Twitter/X URL
-  github: "https://github.com/mearashadowfax/AskPallyWebsite", // Update if needed
+  github: "#", // Update if needed
   linkedin: "#", // Add your LinkedIn URL
   instagram: "#", // Add your Instagram URL
   youtube: "https://youtu.be/_oe03gRcnEs", // Your YouTube video
