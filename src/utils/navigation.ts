@@ -27,7 +27,6 @@ export const navBarLinks: NavLink[] = [
   { name: "Startseite", url: "/" }, // Home
   { name: "Über AskPally", url: "/ueber-askpally" }, // About AskPally (new page)
   { name: "Funktionen", url: "/funktionen" }, // Features (new page)
-  { name: "Blog", url: "/blog" },
   { name: "Kontakt", url: "/kontakt" },
 ];
 
@@ -44,7 +43,6 @@ export const footerLinks: FooterLinkSection[] = [
   {
     section: "Unternehmen",
     links: [
-      { name: "Über uns", url: "/ueber-uns" }, // About Us (new page)
       { name: "Blog", url: "/blog" },
       { name: "Presse", url: "/presse" }, // Press (new page)
       { name: "Karriere", url: "/karriere" }, // Careers (new page)
