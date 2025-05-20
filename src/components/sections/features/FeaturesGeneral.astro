@@ -1,6 +1,6 @@
 ---
 // Import the necessary dependencies
-import { Image } from "astro:assets";
+// Image import removed as it's no longer used for the main feature display
 import IconBlock from "@components/ui/blocks/IconBlock.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 
@@ -14,30 +14,32 @@ interface Props {
   title?: string;
   subTitle?: string;
   features?: Feature[];
-  src?: any;
+  // src and alt props are kept in the interface for potential other uses of the component,
+  // but are not used for the YouTube embed.
+  src?: any; 
   alt?: string;
 }
 // Define props from Astro
-const { title, subTitle, src, alt, features } = Astro.props;
+const { title, subTitle, features } = Astro.props;
+const youtubeVideoUrl = "https://www.youtube.com/embed/_oe03gRcnEs";
 ---
 
 <section
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
 >
-  <!-- Block to display the feature image -->
+  <!-- Block to display the YouTube video -->
   <div class="relative mb-6 overflow-hidden md:mb-8">
-    {
-      src && alt && (
-        <Image
-          src={src}
-          alt={alt}
-          class="h-full w-full object-cover object-center"
-          draggable={"false"}
-          format={"avif"}
-          loading={"eager"}
-        />
-      )
-    }
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe
+        src={youtubeVideoUrl}
+        title="AskPally Pitch Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        class="h-full w-full object-cover object-center"
+      ></iframe>
+    </div>
   </div>
 
   <!-- Displaying the main content consisting of title, subtitle, and several `IconBlock` components -->
