@@ -73,7 +73,7 @@
   --color-purple-900: oklch(0.35 0.09 290);
   --color-purple-950: oklch(0.30 0.07 290);
 
-  /* Yellow-Orange (formerly red) */
+  /* Yellow-Orange (formerly red)
 --color-blue-50: oklch(0.97 0.03 260);
 --color-blue-100: oklch(0.95 0.05 260);
 --color-blue-200: oklch(0.92 0.075 260);
@@ -84,7 +84,7 @@
 --color-blue-700: oklch(0.50 0.13 260);
 --color-blue-800: oklch(0.40 0.11 260);
 --color-blue-900: oklch(0.35 0.09 260);
---color-blue-950: oklch(0.30 0.07 260);
+--color-blue-950: oklch(0.30 0.07 260); */
 
   /* Pastel Yellow (Gelb) with orange hint */
   --color-gelb-50: oklch(0.97 0.03 75);
