@@ -2,26 +2,31 @@
   {
     "heading": "Spielerisch Lernen",
     "content": "Interaktive Antworten, die zum Mitdenken anregen und die natürliche Neugier von Kindern fördern.",
-    "svg": "chat"
+    "svg": "learningIcon"
   },
   {
     "heading": "Wortschatz Erweitern",
     "content": "Durch gezielte Fragen und Erklärungen wird der Wortschatz der Kinder deutlich und nachhaltig vergrößert.",
-    "svg": "dictionary" 
+    "svg": "booksIcon" 
   },
   {
     "heading": "Bildschirmfrei & Sicher",
     "content": "AskPally bietet eine bildschirmfreie Lernalternative. Höchste Datenschutzstandards (DSGVO & EU AI Act konform) sind selbstverständlich.",
-    "svg": "shieldCheck"
+    "svg": "securityIcon"
   },
   {
     "heading": "Eltern-App",
     "content": "Mit der Begleit-App können Eltern Gespräche verfolgen, Nutzungszeiten steuern und erhalten Inspirationen für gemeinsame Lernmomente.",
-    "svg": "settings"
+    "svg": "appIcon"
   },
   {
     "heading": "Hochwertige Materialien",
     "content": "AskPally besteht aus sicheren und kuscheligen Materialien wie GOTS-zertifizierter Bio-Baumwolle.",
-    "svg": "award" 
+    "svg": "materialIcon" 
+  },
+  {
+    "heading": "Chancengleichheit",
+    "content": "AskPally hilft, Bildungsunterschiede zu überwinden und gibt jedem Kind die Möglichkeit, sein volles Potenzial zu entfalten.",
+    "svg": "equalityIcon"
   }
 ]

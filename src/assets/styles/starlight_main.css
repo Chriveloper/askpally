@@ -21,7 +21,7 @@
     --sl-color-gray-5: #383838;
     --sl-color-gray-6: #272727;
     --sl-color-white: #fff;
-    --purple-hsl: 335, 95.8%, 85%;
+    --purple-hsl: 290, 80%, 85%; /* pastel purple */
     --overlay-yellow: hsla(var(--purple-hsl), .2);
     --border: hsla(var(--border-neutral), .4);
     --border-neutral: 0, 0%, 25.1%;
@@ -49,7 +49,7 @@
 }
 
 :root[data-theme='dark'] {
-    --purple-hsl: 335, 95.8%, 75%;
+    --purple-hsl: 290, 80%, 75%; /* pastel purple for dark mode */
     --border-yellow: 335, 96.7%, 88%;
 }
 

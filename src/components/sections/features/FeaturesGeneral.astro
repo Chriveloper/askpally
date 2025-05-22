@@ -39,38 +39,28 @@ const youtubeVideoUrl = "https://www.youtube.com/embed/_oe03gRcnEs";
     </div>
   </div>
 
-  <!-- Rest of the component remains unchanged -->
-  <div class="mt-5 grid gap-8 lg:mt-16 lg:grid-cols-3 lg:gap-12">
-    <!-- Block for title and subtitle -->
-    <div class="lg:col-span-1">
-      <!-- Rendering title -->
-      <h2
-        class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl"
-      >
-        {title}
-      </h2>
-      <!-- Rendering subtitle -->
-      {
-        subTitle && (
-          <p class="mt-2 text-pretty text-neutral-600 dark:text-neutral-400 md:mt-4">
-            {subTitle}
-          </p>
-        )
-      }
-    </div>
+  <!-- Title and subtitle centered above the features -->
+  <div class="text-center max-w-2xl mx-auto">
+    <h2 class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl">
+      {title}
+    </h2>
+    {
+      subTitle && (
+        <p class="mt-2 text-pretty text-neutral-600 dark:text-neutral-400 md:mt-4">
+          {subTitle}
+        </p>
+      )
+    }
+  </div>
 
-    <!-- Block to display the IconBlock components -->
-    <div class="lg:col-span-2">
-      <div class="grid gap-8 sm:grid-cols-2 md:gap-12">
-        <!-- Injecting IconBlock components with different properties -->
-        { features &&
-          features.map((feature) => (
-            <IconBlock heading={feature.heading} content={feature.content}>
-              <Icon name={feature.svg} />
-            </IconBlock>
-          ))
-        }
-      </div>
-    </div>
+  <!-- Features grid, now full width and centered -->
+  <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 justify-items-center">
+    { features &&
+      features.map((feature) => (
+        <IconBlock heading={feature.heading} content={feature.content}>
+          <Icon name={feature.svg} />
+        </IconBlock>
+      ))
+    }
   </div>
 </section>
