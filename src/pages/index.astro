@@ -6,6 +6,8 @@ import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
+import ClientsSection from "@components/sections/landing/ClientsSection.astro";
+import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 import heroImage from "@images/hero-image.avif";
 import faqs from "@data/faqs.json";
 import features from "@data/features.json";
@@ -67,7 +69,76 @@ import dashboard from "@images/dashboard-image.avif";
     ]}
   />
 
-  <PricingSection pricing={pricing} />
 
-  <FAQ title="Häufig<br />gestellte Fragen" faqs={faqs} />
+  <PricingSection 
+    pricing={{
+      title: "Faire Preise für alle neugierigen Entdecker",
+      subTitle: "Wählen Sie das passende Modell für Ihr Kind",
+      badge: "Empfohlen",
+      thirdOption: "Benötigen Sie eine maßgeschneiderte Lösung für Bildungseinrichtungen?",
+      btnText: "Kontaktieren Sie uns",
+      starterKit: {
+        name: "AskPally Basic",
+        description: "Der perfekte Einstieg für neugierige Entdecker",
+        price: "79",
+        cents: "99",
+        billingFrequency: "einmalig",
+        features: [
+          "Alle Grundfunktionen",
+          "Kostenlose App für Eltern",
+          "Zertifizierte Materialien (GOTS)",
+          "Datenschutz nach DSGVO",
+          "1 Jahr Garantie"
+        ],
+        purchaseBtnTitle: "Jetzt vorbestellen",
+        purchaseLink: "#"
+      },
+      professionalToolbox: {
+        name: "AskPally Plus",
+        description: "Mit Premium-Funktionen für optimale Förderung",
+        price: "79",
+        cents: "99",
+        billingFrequency: "+ 5,99€/Monat",
+        features: [
+          "Alle Basic-Funktionen",
+          "Personalisierte Lerninhalte",
+          "Detaillierte Lernstatistiken",
+          "Erweiterte Elternkontrolle",
+          "Premium-Support",
+          "2 Jahre Garantie"
+        ],
+        purchaseBtnTitle: "Jetzt vorbestellen",
+        purchaseLink: "#"
+      }
+    }}
+  />
+
+  <FAQ 
+    title="Häufig<br />gestellte Fragen" 
+    faqs={{
+      subTitle: "Alles was Sie über AskPally wissen müssen",
+      faqs: [
+        {
+          question: "Wie funktioniert AskPally?",
+          answer: "AskPally ist ein interaktives Kuscheltier mit integrierter KI, das kindgerecht auf Fragen antwortet. Es fördert spielerisch Wissen und Sprachentwicklung, ohne Bildschirme zu nutzen."
+        },
+        {
+          question: "Für welches Alter ist AskPally geeignet?",
+          answer: "AskPally wurde speziell für Kinder im Alter von 3 bis 8 Jahren entwickelt, um ihre natürliche Neugier und sprachliche Entwicklung zu fördern."
+        },
+        {
+          question: "Wie sicher sind meine Daten bei AskPally?",
+          answer: "Datenschutz hat bei uns höchste Priorität. AskPally ist vollständig DSGVO-konform und entspricht den Anforderungen des EU AI Act. Alle Daten werden verschlüsselt übertragen und verarbeitet."
+        },
+        {
+          question: "Welche Kontrolle haben Eltern über AskPally?",
+          answer: "Mit der kostenlosen Begleit-App können Eltern die Nutzungszeiten festlegen, Gesprächsinhalte einsehen und Lerninhalte mitgestalten."
+        },
+        {
+          question: "Aus welchen Materialien besteht AskPally?",
+          answer: "AskPally besteht aus 100% GOTS-zertifizierter Bio-Baumwolle und ist mit recyceltem Polyester nach Global Recycled Standard gefüllt. Die Materialien sind hautfreundlich, hypoallergen und maschinenwaschbar."
+        }
+      ]
+    }}
+  />
 </MainLayout>
