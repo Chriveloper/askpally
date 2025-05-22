@@ -130,10 +130,12 @@ const appleTouchIcon = await getImage({
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 {/* Links for favicons */}
-<link href="/favicon.ico" rel="icon" sizes="any" type="image/x-icon" />
-<link href={faviconSvg.src} rel="icon" type="image/svg+xml" sizes="any" />
-<meta name="mobile-web-app-capable" content="yes" />
-<link href={appleTouchIcon.src} rel="apple-touch-icon" />
-<link href={appleTouchIcon.src} rel="shortcut icon" />
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="AskPally" />
+<link rel="manifest" href="/site.webmanifest" />
 {/* Set theme color */}
 <meta name="theme-color" content="#facc15" />
