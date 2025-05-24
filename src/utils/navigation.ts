@@ -25,9 +25,8 @@ export interface SocialLinks {
 // An array of links for the navigation bar
 export const navBarLinks: NavLink[] = [
   { name: "Startseite", url: "/" }, // Home
-  { name: "Über AskPally", url: "/ueber-askpally" }, // About AskPally (new page)
-  { name: "Funktionen", url: "/funktionen" }, // Features (new page)
-  { name: "Kontakt", url: "/kontakt" },
+  { name: "Unsere Vision", url: "/unsere-vision" }, // Our Vision (updated)
+  { name: "Team & Kontakt", url: "/kontakt" }, // Team & Contact (updated)
 ];
 
 // An array of links for the footer

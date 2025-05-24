@@ -1,0 +1,81 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `Unser Team | ${SITE.title}`;
+const metaDescription =
+  "Lerne das Team hinter AskPally kennen: Sechs Gründer:innen mit Expertise in Technik, Bildung, Marketing und Finanzen. Kontaktiere uns für Kooperationen, Presse oder Support.";
+const ogTitle = "Das AskPally Team & Kontakt";
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription={metaDescription}
+  customOgTitle={ogTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://askpally.de/kontakt",
+    url: "https://askpally.de/kontakt",
+    name: "Unser Team | AskPally",
+    description: metaDescription,
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://askpally.de",
+      name: "AskPally",
+      description: metaDescription,
+    },
+    inLanguage: "de-DE",
+  }}
+>
+  <section class="py-12 max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6">Das Team hinter AskPally</h1>
+    <p class="mb-8">
+      Unser Gründungsteam vereint technisches Know-how, pädagogische Leidenschaft und unternehmerischen Spirit. Wir arbeiten eng zusammen, um mit AskPally Chancengleichheit und Lernfreude für alle Kinder zu ermöglichen.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-xl font-semibold">Christian (CEO)</h2>
+        <p>Strategische Planung, Organisation und Gesamtverantwortung. Technischer Background in Mathematik und Informatik.</p>
+      </div>
+      <div>
+        <h2 class="text-xl font-semibold">Maya (CMO)</h2>
+        <p>Marketing, Konzeptentwicklung und Markenaufbau. Umfangreiche Erfahrung im Marketing und stark vernetzt in der deutschen Geschäftswelt.</p>
+      </div>
+      <div>
+        <h2 class="text-xl font-semibold">Philip (CTO)</h2>
+        <p>Technische Umsetzung, Soft- und Hardwareentwicklung, KI-Integration. Starke Programmierkenntnisse und Innovationsgeist.</p>
+      </div>
+      <div>
+        <h2 class="text-xl font-semibold">Wangzi (CIO)</h2>
+        <p>IT-Infrastruktur, Datenschutz und Compliance. Sorgt für sichere, skalierbare Systeme und Einhaltung aller rechtlichen Anforderungen.</p>
+      </div>
+      <div>
+        <h2 class="text-xl font-semibold">Sven (CSO)</h2>
+        <p>Vertrieb, Geschäftsentwicklung und Partnerakquise. Baut Netzwerke auf und sorgt für erfolgreiche Markteinführung.</p>
+      </div>
+      <div>
+        <h2 class="text-xl font-semibold">Mio (CFO)</h2>
+        <p>Finanzplanung, Buchführung und Controlling. Gewährleistet effizientes Ressourcenmanagement und nachhaltiges Wachstum.</p>
+      </div>
+    </div>
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">Kontakt</h2>
+      <p>
+        Du hast Fragen, möchtest kooperieren oder mehr über AskPally erfahren? Wir freuen uns auf deine Nachricht!
+      </p>
+      <ul class="mt-4">
+        <li>
+          <strong>E-Mail:</strong> <a href="mailto:askpally@gmail.de" class="text-blue-600 underline">askpally@gmail.com</a>
+        </li>
+        <!-- <li>
+          <strong>Presseanfragen:</strong> <a href="mailto:presse@askpally.de" class="text-blue-600 underline">presse@askpally.de</a>
+        </li> -->
+        <li>
+          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/askpally" class="text-blue-600 underline" target="_blank">AskPally auf LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,123 @@
+---
+// Import necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import MainSection from "@components/ui/blocks/MainSection.astro";
+import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `Über AskPally | ${SITE.title}`;
+const metaDescription =
+  "AskPally ist ein sprechender Lernbegleiter, der Kindern altersgerecht Wissen vermittelt, Chancenungleichheit abbaut und Familien verbindet. Entdecke die Vision, Funktionen und das Team hinter AskPally.";
+const ogTitle = "Unsere Vision & Funktionen | AskPally";
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription={metaDescription}
+  customOgTitle={ogTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://askpally.de/unsere-vision",
+    url: "https://askpally.de/unsere-vision",
+    name: "Über AskPally",
+    description: metaDescription,
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://askpally.de",
+      name: "AskPally",
+      description: metaDescription,
+    },
+    inLanguage: "de-DE",
+  }}
+>
+  <MainSection
+    title="Jede Frage verdient eine Antwort – Faire Chancen für neugierige Entdecker"
+    subTitle="AskPally ist mehr als ein sprechendes Kuscheltier: Es ist ein interaktiver Lernbegleiter, der Kindern von 3 bis 8 Jahren altersgerecht Wissen vermittelt, den Wortschatz erweitert und die Freude am Lernen fördert – komplett bildschirmfrei."
+    btnExists={true}
+    btnTitle="Jetzt Video ansehen"
+    btnURL="https://youtu.be/_oe03gRcnEs"
+  />
+
+  <section class="py-8 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Unsere Vision</h2>
+    <p class="mb-4">
+      Kinder sind geborene Entdecker und stellen bis zu 500 Fragen am Tag. Doch nicht alle Kinder starten mit denselben Chancen: Viele Kinder aus bildungsfernen Familien oder mit Migrationshintergrund verfügen bereits im Kindergartenalter über einen deutlich kleineren Wortschatz. AskPally schließt diese Lücke und ermöglicht faire Startbedingungen – unabhängig von Herkunft oder sozialem Umfeld.
+    </p>
+    <p>
+      Unsere Vision: Jedes Kind soll neugierig bleiben dürfen, Antworten bekommen und sein Potenzial voll entfalten – durch kindgerechte, dialogorientierte Wissensvermittlung, die Spaß macht und Familien verbindet.
+    </p>
+  </section>
+
+  <section class="py-8 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Die Funktionen von AskPally</h2>
+    <ul class="list-disc ml-6 space-y-2">
+      <li>
+        <strong>Sprachgesteuerter Lernbegleiter:</strong> Kinder können AskPally alles fragen – von „Warum ist der Himmel blau?“ bis zu „Wie lebten Dinosaurier?“ – und erhalten altersgerechte, dialogorientierte Antworten.
+      </li>
+      <li>
+        <strong>Wortschatzförderung & Sprachkompetenz:</strong> Durch spielerische Gespräche wird der aktive Wortschatz erweitert und das Sprachverständnis gestärkt.
+      </li>
+      <li>
+        <strong>Bildschirmfreie Interaktion:</strong> AskPally funktioniert komplett ohne Display und setzt auf natürliche, kindgerechte Kommunikation.
+      </li>
+      <li>
+        <strong>Eltern-App:</strong> Eltern können über eine kostenlose App die Gesprächsthemen ihres Kindes einsehen, Nutzungszeiten regulieren und erhalten Inspiration für gemeinsame Gespräche – bei voller Kontrolle und maximalem Datenschutz.
+      </li>
+      <li>
+        <strong>Datenschutz & Sicherheit:</strong> Alle Daten werden DSGVO- und EU AI Act-konform verarbeitet. Die KI läuft auf eigenen Servern, keine Datenweitergabe an Dritte.
+      </li>
+      <li>
+        <strong>Nachhaltigkeit:</strong> AskPally besteht aus GOTS-zertifizierter Bio-Baumwolle und recyceltem Polyester, ist hypoallergen und maschinenwaschbar.
+      </li>
+    </ul>
+  </section>
+
+  <section class="py-8 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Das Problem, das wir lösen</h2>
+    <p>
+      Viele Kinder erhalten im Alltag nicht die sprachliche Anregung, die sie für einen erfolgreichen Bildungsstart benötigen. Zeitmangel, fehlende Erklärungen oder Sprachbarrieren führen dazu, dass wichtige Fragen unbeantwortet bleiben und Lernfreude verloren geht. AskPally begegnet diesen Herausforderungen mit einer kindgerechten, dialogorientierten KI, die Wissen vermittelt, Neugier fördert und Eltern entlastet.
+    </p>
+    <p>
+      Unser Ziel: Bildung gerechter machen, Chancenungleichheit abbauen und Familien im Alltag stärken.
+    </p>
+  </section>
+
+  <section class="py-8 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Unser Geschäftsmodell</h2>
+    <p>
+      AskPally wird direkt über unseren Online-Shop und ausgewählte Partner vertrieben. Für 79&nbsp;€ erhalten Familien den sprechenden Lernbegleiter, die App ist kostenlos. Zusätzliche Premium-Features wie detaillierte Gesprächsanalysen gibt es im Abo „AskPally+“ für 5,99&nbsp;€/Monat. Durch gezielte Kooperationen mit Kitas und Mikro-Influencern erreichen wir unsere Zielgruppe direkt und authentisch.
+    </p>
+  </section>
+
+  <!-- <FeaturesStats
+    title="AskPally in Zahlen"
+    subTitle="Unser Prototyp ist bereits im Einsatz – und die ersten Rückmeldungen zeigen: Kinder lieben Pally, Eltern schätzen die Unterstützung."
+    mainStatTitle="100%"
+    mainStatSubTitle="bildschirmfreie Lernfreude"
+    stats={[
+      {
+        stat: "500+",
+        description: "Fragen pro Tag – AskPally bleibt geduldig",
+      },
+      {
+        stat: "79€",
+        description: "Preis für faire Bildungschancen",
+      },
+      {
+        stat: "6",
+        description: "Expert:innen im Gründerteam",
+      },
+    ]}
+  /> -->
+
+  <section class="py-8 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Unsere Vision für die Zukunft</h2>
+    <p>
+      Wir wollen eine Welt schaffen, in der jedes Kind sich klug kuscheln kann – unabhängig von Herkunft, Sprache oder sozialem Status. AskPally soll zum Synonym für faire Bildungschancen werden und Familien auf der ganzen Welt begleiten.
+    </p>
+    <p>
+      Unterstütze uns auf diesem Weg – gemeinsam gestalten wir die Zukunft des Lernens!
+    </p>
+  </section>
+</MainLayout>

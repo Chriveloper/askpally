@@ -88,7 +88,7 @@ const homeUrl = "/"; // Simplified to root path
         <!-- Navigation links and Authentication component -->
         {
           strings.navBarLinks.map((link) => {
-            if (link.name === "Services") { // This condition might need to be updated based on German link names
+            if (link.name === "Unsere Vision") { // Updated from "Services"
               return <MegaMenuLink />;
             } else {
               return <NavLink url={link.url} name={link.name} />;
