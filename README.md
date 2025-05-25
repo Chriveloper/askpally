@@ -1,4 +1,4 @@
-# <img src="public/favicon.svg" alt="AskPally Logo" style="height: 1.5em; vertical-align: middle; margin-right: 0.3em;"> AskPally – Jede Frage verdient eine Antwort
+# <img src="public/favicon.svg" alt="AskPally Logo" width="28" height="28" style="vertical-align: middle; margin-right: 0.3em;"> AskPally – Jede Frage verdient eine Antwort
 
 **AskPally** ist ein sprechender, KI-gestützter Lernbegleiter, der Kindern altersgerecht Wissen vermittelt, Chancenungleichheit abbaut und Familien verbindet. Unser Ziel: Faire Bildungschancen und mehr Neugier für alle!
 
