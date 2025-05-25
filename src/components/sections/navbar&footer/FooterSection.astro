@@ -83,23 +83,15 @@ const crafted = "Entwickelt von"; // Crafted by in German
       </div>
 
       <!-- Social Brands - Only include the ones defined in your SocialLinks interface -->
-      <div>
-        <!-- Only include social links that are defined in your SocialLinks interface -->
-        {strings.socialLinks.facebook && (
-          <FooterSocialLink url={strings.socialLinks.facebook}>
-            <Icon name="facebookFooter" />
+      <div class="flex items-center gap-3 mt-2 sm:mt-0">
+        {strings.socialLinks.linkedin && (
+          <FooterSocialLink url={strings.socialLinks.linkedin}>
+            <Icon name="linkedIn" />
           </FooterSocialLink>
         )}
-
-        {strings.socialLinks.twitter && (
-          <FooterSocialLink url={strings.socialLinks.twitter}>
-            <Icon name="xFooter" />
-          </FooterSocialLink>
-        )}
-
         {strings.socialLinks.youtube && (
           <FooterSocialLink url={strings.socialLinks.youtube}>
-            <Icon name="youtubeFooter" />
+            <Icon name="youtube" />
           </FooterSocialLink>
         )}
       </div>
