@@ -92,37 +92,37 @@ interface PricingSectionProps {
     </div>
     <!-- Professional Toolbox product details -->
     <div
-      class="w-full rounded-xl bg-gradient-to-tr from-purple-100 via-blue-100 to-blue-200 p-6 shadow-xl sm:w-1/2 sm:p-8"
+      class="w-full rounded-xl bg-linear-to-tr from-[#687de0] to-[#7b72d5] p-6 shadow-xl sm:w-1/2 sm:p-8"
     >
       <div
         class="mb-4 flex flex-col items-start justify-between gap-4 lg:flex-row"
       >
         <div>
-          <h3 class="text-2xl font-bold text-black dark:text-white sm:text-3xl">
+          <h3 class="text-2xl font-bold text-neutral-100 sm:text-3xl">
             {pricing.professionalToolbox.name}
           </h3>
-          <p class="text-black dark:text-white">{pricing.professionalToolbox.description}</p>
+          <p class="text-violet-200">{pricing.professionalToolbox.description}</p>
         </div>
 
         <span
-          class="order-first inline-block rounded-full bg-purple-100/80 px-3 py-1 text-xs font-bold uppercase tracking-wider text-purple-600 lg:order-none"
+          class="order-first inline-block rounded-full bg-violet-200/60 bg-opacity-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-center text-violet-600 lg:order-none"
           >{pricing.badge}</span
         >
       </div>
 
       <div class="mb-4">
-        <span class="text-6xl font-bold text-black dark:text-white"
+        <span class="text-6xl font-bold text-neutral-100"
           >{pricing.professionalToolbox.price}</span
         >
-        <span class="text-lg font-bold text-black dark:text-white"
+        <span class="text-lg font-bold text-violet-100"
           >{pricing.professionalToolbox.cents}</span
         >
-        <span class="ms-3 text-black dark:text-white"
+        <span class="ms-3 text-violet-200"
           >{pricing.professionalToolbox.billingFrequency}</span
         >
       </div>
       <!-- Features list - automatically created by mapping over `features` array -->
-      <ul class="mb-6 space-y-2 text-black dark:text-white">
+      <ul class="mb-6 space-y-2 text-violet-100">
         {
           pricing.professionalToolbox.features.map((feature: string) => (
             <li class="flex items-center gap-1.5">
@@ -136,7 +136,7 @@ interface PricingSectionProps {
       <!-- CTA for purchasing the product -->
       <a
         href={pricing.professionalToolbox.purchaseLink}
-        class="block rounded-lg bg-purple-100/70 px-8 py-3 text-center text-sm font-bold text-purple-700 outline-hidden ring-violet-200 transition duration-300 hover:bg-purple-200 focus-visible:ring-3 active:bg-purple-300 md:text-base"
+        class="block rounded-lg bg-violet-200/40 bg-opacity-50 px-8 py-3 text-center text-sm font-bold text-neutral-100 outline-hidden ring-violet-300 transition duration-300 hover:bg-violet-300 focus-visible:ring-3 active:bg-violet-400 md:text-base"
         >{pricing.professionalToolbox.purchaseBtnTitle}</a
       >
     </div>
