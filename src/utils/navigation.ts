@@ -39,6 +39,13 @@ export const footerLinks: FooterLinkSection[] = [
       { name: "Für Eltern", url: "/fuer-eltern" },
     ],
   },
+  {
+    section: "Rechtliches",
+    links: [
+      { name: "Impressum", url: "/impressum" },
+      { name: "Datenschutz", url: "/datenschutz" },
+    ],
+  },
 ];
 
 // An object of links for social icons

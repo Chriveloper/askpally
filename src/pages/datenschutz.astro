@@ -1,0 +1,198 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import { SITE } from "@data/constants"; // SITE.title ist "AskPally"
+
+const pageTitle: string = `Datenschutzerklärung | ${SITE.title}`;
+const metaDescription =
+  `Datenschutzerklärung für das Projekt ${SITE.title} - Informationen zum Umgang mit personenbezogenen Daten.`;
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription={metaDescription}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://askpally.de/datenschutz`, // Deine Domain
+    url: `https://askpally.de/datenschutz`,   // Deine Domain
+    name: `Datenschutzerklärung | ${SITE.title}`,
+    description: metaDescription,
+    isPartOf: {
+      "@type": "WebSite",
+      url: `https://askpally.de`,           // Deine Domain
+      name: `${SITE.title} (Projekt)`,
+    },
+    inLanguage: "de-DE",
+  }}
+>
+  <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="prose prose-lg max-w-none dark:prose-invert">
+      <h1 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 mb-8">
+        Datenschutzerklärung
+      </h1>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+          1. Datenschutz auf einen Blick
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-2">
+          Wir freuen uns über Ihr Interesse an unserem Projekt "${SITE.title}". Der Schutz Ihrer persönlichen Daten ist uns wichtig. Nachfolgend informieren wir Sie darüber, welche Daten bei der Nutzung unserer Webseite erhoben und wie diese verwendet werden.
+        </p>
+        <p class="text-neutral-600 dark:text-neutral-400">
+          Diese Datenschutzerklärung gilt für die Webseite unter der Domain <strong>askpally.de</strong>.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+          2. Verantwortliche Stelle
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-2">
+          Verantwortlicher für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze sowie sonstiger datenschutzrechtlicher Bestimmungen ist:
+        </p>
+        <div class="bg-neutral-100 dark:bg-neutral-800 p-6 rounded-lg">
+          <p>Thomas Tian</p>
+          <p>Rat-Kaffl-Straße 23</p>
+          <p>85609 Aschheim</p>
+          <p>Deutschland</p>
+          <br>
+          <p><strong>E-Mail:</strong> <a href="mailto:askpally@gmail.com" class="text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300">askpally@gmail.com</a></p>
+          <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400">(Kontaktdaten siehe auch unser Impressum)</p>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+          3. Erhebung und Verarbeitung personenbezogener Daten beim Besuch unserer Website
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+          Bei der bloß informatorischen Nutzung unserer Website, also wenn Sie sich nicht registrieren oder uns anderweitig Informationen übermitteln, erheben wir nur die Daten, die Ihr Browser an unseren Server übermittelt (sog. Server-Logfiles). Wenn Sie unsere Website aufrufen, erheben wir die folgenden Daten, die für uns technisch erforderlich sind, um Ihnen die Website anzuzeigen und die Stabilität und Sicherheit zu gewährleisten (Rechtsgrundlage ist Art. 6 Abs. 1 S. 1 lit. f DSGVO):
+        </p>
+        <ul class="list-disc list-inside space-y-1 text-neutral-600 dark:text-neutral-400 mb-4">
+          <li>IP-Adresse (ggf. in anonymisierter Form)</li>
+          <li>Datum und Uhrzeit der Anfrage</li>
+          <li>Zeitzonendifferenz zur Greenwich Mean Time (GMT)</li>
+          <li>Inhalt der Anforderung (konkrete Seite)</li>
+          <li>Zugriffsstatus/HTTP-Statuscode</li>
+          <li>jeweils übertragene Datenmenge</li>
+          <li>Website, von der die Anforderung kommt (Referrer URL)</li>
+          <li>Browser</li>
+          <li>Betriebssystem und dessen Oberfläche</li>
+          <li>Sprache und Version der Browsersoftware.</li>
+        </ul>
+        <p class="text-neutral-600 dark:text-neutral-400">
+          Diese Daten werden temporär gespeichert und nicht mit anderen Datenquellen zusammengeführt. Die Speicherung in Logfiles erfolgt, um die Funktionsfähigkeit der Website sicherzustellen. Zudem dienen uns die Daten zur Optimierung der Website und zur Sicherstellung der Sicherheit unserer informationstechnischen Systeme. Eine Auswertung der Daten zu Marketingzwecken findet in diesem Zusammenhang nicht statt.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+          4. Kontaktaufnahme
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+          Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen mitgeteilten Daten (Ihre E-Mail-Adresse, ggf. Ihr Name und Ihre Telefonnummer sowie Ihr Anliegen) von uns gespeichert, um Ihre Fragen zu beantworten. Die in diesem Zusammenhang anfallenden Daten löschen wir, nachdem die Speicherung nicht mehr erforderlich ist, oder schränken die Verarbeitung ein, falls gesetzliche Aufbewahrungspflichten bestehen. Rechtsgrundlage für die Verarbeitung der Daten, die im Zuge einer Übersendung einer E-Mail übermittelt werden, ist Art. 6 Abs. 1 lit. f DSGVO. Zielt der E-Mail-Kontakt auf den Abschluss eines Vertrages ab, so ist zusätzliche Rechtsgrundlage für die Verarbeitung Art. 6 Abs. 1 lit. b DSGVO (obwohl für ein Projekt eher unwahrscheinlich).
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+          5. Cookies
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+          Unsere Website verwendet möglicherweise technisch notwendige Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät abgelegt werden und die Ihr Browser speichert. Sie dienen dazu, unser Angebot nutzerfreundlicher und effektiver zu machen.
+        </p>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+          Die meisten der von uns eventuell verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Diese Cookies ermöglichen es uns gegebenenfalls, Ihren Browser beim nächsten Besuch wiederzuerkennen (z.B. wenn Sie eine Spracheinstellung vornehmen oder einen Dark-Mode aktivieren, der gespeichert wird).
+        </p>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+          Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.
+        </p>
+        <p class="text-neutral-600 dark:text-neutral-400">
+          Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs oder zur Bereitstellung bestimmter, von Ihnen erwünschter Funktionen erforderlich sind, werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert, sofern keine andere Rechtsgrundlage angegeben wird. Wir haben ein berechtigtes Interesse an der Speicherung von Cookies zur technisch fehlerfreien und optimierten Bereitstellung unserer Dienste.
+          Wir verwenden keine Cookies für Analyse- oder Marketingzwecke von Drittanbietern.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+          6. Hosting und Content Delivery Networks (CDN)
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+          Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden (insbesondere die unter Punkt 3 genannten Server-Logfiles), werden auf den Servern des Hosters gespeichert.
+        </p>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+          Der Einsatz des Hosters erfolgt im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Unser Hoster wird Ihre Daten nur insoweit verarbeiten, als dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.
+        </p>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+          Gegebenenfalls werden Ihre Daten auch in Länder außerhalb der Europäischen Union (EU) oder des Europäischen Wirtschaftsraums (EWR) übertragen, beispielsweise in die USA. Sofern dies der Fall ist und für das betreffende Land kein Angemessenheitsbeschluss der EU-Kommission vorliegt, erfolgt die Datenübermittlung auf Grundlage geeigneter Garantien, wie z.B. Standardvertragsklauseln der EU-Kommission, um ein angemessenes Datenschutzniveau sicherzustellen.
+          <!-- WICHTIG: Wenn du weißt, dass dein Hoster (z.B. Vercel, Netlify) Server in den USA nutzt, ist dieser Absatz wichtig. -->
+        </p>
+        <p class="text-neutral-600 dark:text-neutral-400">
+          <!-- Hier könntest du den Namen deines Hosters nennen, z.B.:
+          Wir setzen folgenden Hoster ein:
+          [Name und Anschrift des Hosters]
+          Mit diesem haben wir einen Vertrag zur Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO geschlossen.
+          -->
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+          7. Ihre Rechte als betroffene Person
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+          Ihnen stehen als betroffene Person nach der DSGVO verschiedene Rechte zu:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-neutral-600 dark:text-neutral-400 mb-4">
+          <li><strong>Auskunftsrecht (Art. 15 DSGVO):</strong> Sie haben das Recht, Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen.</li>
+          <li><strong>Recht auf Berichtigung (Art. 16 DSGVO):</strong> Sie haben das Recht, unverzüglich die Berichtigung unrichtiger oder Vervollständigung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen.</li>
+          <li><strong>Recht auf Löschung (Art. 17 DSGVO):</strong> Sie haben das Recht, die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen, soweit nicht die Verarbeitung zur Ausübung des Rechts auf freie Meinungsäußerung und Information, zur Erfüllung einer rechtlichen Verpflichtung, aus Gründen des öffentlichen Interesses oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist.</li>
+          <li><strong>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+          <li><strong>Recht auf Datenübertragbarkeit (Art. 20 DSGVO):</strong> Sie haben das Recht, Ihre personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder die Übermittlung an einen anderen Verantwortlichen zu verlangen.</li>
+          <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Sofern Ihre personenbezogenen Daten auf Grundlage von berechtigten Interessen gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO verarbeitet werden, haben Sie das Recht, gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten einzulegen, soweit dafür Gründe vorliegen, die sich aus Ihrer besonderen Situation ergeben.</li>
+          <li><strong>Recht auf Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO):</strong> Sie haben das Recht, eine einmal erteilte Einwilligung jederzeit uns gegenüber zu widerrufen. Dies hat zur Folge, dass wir die Datenverarbeitung, die auf dieser Einwilligung beruhte, für die Zukunft nicht mehr fortführen dürfen. (Für ein Projekt wahrscheinlich weniger relevant, da kaum einwilligungspflichtige Verarbeitungen stattfinden).</li>
+        </ul>
+        <p class="text-neutral-600 dark:text-neutral-400">
+          Zur Geltendmachung Ihrer Rechte können Sie sich jederzeit an die unter Ziffer 2 genannte verantwortliche Stelle wenden.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+          8. Beschwerderecht bei der Aufsichtsbehörde
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400">
+          Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs steht Ihnen das Recht auf Beschwerde bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat Ihres Aufenthaltsorts, Ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes, zu, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die DSGVO verstößt.
+        </p>
+        <p class="text-neutral-600 dark:text-neutral-400 mt-2">
+          Die für Thomas Tian (Aschheim, Bayern) primär zuständige Aufsichtsbehörde ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA). Kontaktdaten und weitere Informationen finden Sie auf deren Webseite: <a href="https://www.lda.bayern.de" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300 underline">https://www.lda.bayern.de</a>.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+          9. Datensicherheit
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400">
+          Wir treffen nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung der Rechte und Freiheiten natürlicher Personen geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten. Unsere Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL-bzw. TLS-Verschlüsselung.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-neutral-700 dark:text-neutral-300 mb-4">
+          10. Aktualität und Änderung dieser Datenschutzerklärung
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400">
+          Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Juni 2025 <span class="text-sm text-neutral-500 dark:text-neutral-400">(Bitte aktuelles Datum eintragen)</span>. Durch die Weiterentwicklung unserer Website und Angebote darüber oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf der Website von Ihnen abgerufen und ausgedruckt werden.
+        </p>
+      </section>
+
+      <div class="mt-12 pt-8 border-t border-neutral-300 dark:border-neutral-700">
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          Stand: Juni 2025 <span class="text-sm text-neutral-500 dark:text-neutral-400">(Bitte aktuelles Datum/Monat eintragen)</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</MainLayout>
