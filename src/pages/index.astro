@@ -6,26 +6,19 @@ import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
-import ClientsSection from "@components/sections/landing/ClientsSection.astro";
-import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 import heroImage from "@images/askpally.avif";
-import faqs from "@data/faqs.json";
 import features from "@data/features.json";
 import pricing from "@data/pricing.json";
 import featureImage from "@images/features-image.avif";
-import construction from "@images/construction-image.avif";
 import tools from "@images/automated-tools.avif";
 import dashboard from "@images/dashboard-image.avif";
+import security from "@images/security-image.avif";
 ---
 
 <MainLayout>
   <HeroSection
     title=`AskPally: Jede Frage verdient eine <span class="text-purple-400 dark:text-purple-300">Antwort</span>.`
     subTitle="Der sprechende Lernbegleiter, der kindliche Neugier fördert und Bildungschancen gerechter macht."
-    primaryBtn="Jetzt abstimmen!"
-    primaryBtnURL="https://vote.askpally.com"
-    secondaryBtn="Video ansehen"
-    secondaryBtnURL="https://youtu.be/_oe03gRcnEs"
     withReview={false}
     src={heroImage}
     alt="AskPally interaktives Plüschtier"
@@ -65,60 +58,35 @@ import dashboard from "@images/dashboard-image.avif";
         content:
         "AskPally ist bildschirmfrei und aus hochwertigen, GOTS-zertifizierten Materialien gefertigt. Datenschutz nach DSGVO und EU AI Act stehen bei uns an erster Stelle.",
         svg: "house",
-        src: construction,
+        src: security,
         alt: "AskPally Plüschtier Detailaufnahme Material",
       },
     ]}
   />
 
+  <!-- Development notice before pricing -->
+  <div class="mx-auto max-w-2xl text-center px-4 py-8">
+    <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6">
+      <h3 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-2">
+        🚧 Entwicklung in vollem Gange
+      </h3>
+      <p class="text-blue-700 dark:text-blue-300">
+        AskPally befindet sich aktuell in der Entwicklungsphase. Die hier genannten Preise sind vorläufig und können sich noch ändern.
+      </p>
+    </div>
+  </div>
 
-  <PricingSection 
-    pricing={{
-    title: "Faire Preise für alle neugierigen Entdecker",
-    subTitle: "Für nur 79€ kommt Pally direkt zu euch nach Hause",
-    badge: "Empfohlen",
-    thirdOption: "", // Empty string to remove third option
-    btnText: "", // Empty string to remove button
-      starterKit: {
-        name: "AskPally",
-        description: "Der perfekte Einstieg für neugierige Entdecker",
-      price: "79",
-      cents: "00",
-        billingFrequency: "einmalig",
-        features: [
-          "Alle Grundfunktionen",
-        "Kostenlose App für Eltern",
-        "Volle Kontrolle über Nutzungszeiten",
-        "Einsicht in Gesprächsverläufe",
-        "GOTS-zertifizierte Bio-Baumwolle",
-        ],
-        purchaseBtnTitle: "Jetzt vorbestellen",
-        purchaseLink: "#"
-      },
-      professionalToolbox: {
-        name: "AskPally+",
-        description: "Mit Premium-Funktionen für optimale Förderung",
-        price: "79",
-        cents: "00",
-        billingFrequency: "+ 5,99€/Monat",
-        features: [
-        "Alle Basic-Funktionen",
-        "Gesprächszusammenfassungen",
-        "Detaillierte Lernstatistiken",
-        "Erweiterte Elternkontrolle",
-        "Premium-Support"
-        ],
-        purchaseBtnTitle: "Jetzt vorbestellen",
-        purchaseLink: "#"
-      }
-    }}
-  />
+  <PricingSection pricing={pricing} />
 
   <FAQ 
     title="Häufig<br />gestellte Fragen" 
     faqs={{
       subTitle: "Alles was Sie über AskPally wissen müssen",
       faqs: [
+        {
+          question: "Wann wird AskPally verfügbar sein?",
+          answer: "Wir können noch kein genaues Datum nennen, aber wir arbeiten gerade intensiv an Partnerschaften und der Produktentwicklung, um AskPally so schnell wie möglich zu verwirklichen. Wir halten Sie über unseren Blog und Newsletter auf dem Laufenden."
+        },
         {
           question: "Wie funktioniert AskPally?",
           answer: "AskPally ist ein interaktives Kuscheltier mit integrierter KI, das kindgerecht auf Fragen antwortet. Es fördert spielerisch Wissen und Sprachentwicklung, ohne Bildschirme zu nutzen."

@@ -1,6 +1,5 @@
 ---
-// Import SecondaryCTA component for use in this module
-import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
+// Import Icon component for use in this module
 import Icon from "@components/ui/icons/Icon.astro";
 
 // Define props from Astro
@@ -18,19 +17,7 @@ type Product = {
   purchaseLink: string;
 };
 
-interface PricingSectionProps {
-  title: string;
-  subTitle: string;
-  badge: string;
-  thirdOption: string;
-  btnText: string;
-  pricing: {
-    title: string;
-    subTitle: string;
-    starterKit: Product;
-    professionalToolbox: Product;
-  };
-}
+
 ---
 
 <section
@@ -132,4 +119,4 @@ interface PricingSectionProps {
     </div>
   </div>
 
-</section>
+</section> 

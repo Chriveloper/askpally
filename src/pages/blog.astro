@@ -1,0 +1,75 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import MainSection from "@components/ui/blocks/MainSection.astro";
+import { getCollection } from 'astro:content';
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `Blog | ${SITE.title}`;
+const metaDescription =
+  "Entdecken Sie die neuesten Entwicklungen bei AskPally, externe Berichte und Insights rund um kindgerechte KI und Bildung. Bleiben Sie auf dem Laufenden.";
+const ogTitle = "Blog | AskPally";
+
+// Get all blog posts and sort by date
+const blogPosts = await getCollection('blog');
+const sortedPosts = blogPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription={metaDescription}
+  customOgTitle={ogTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://askpally.de/blog",
+    url: "https://askpally.de/blog",
+    name: "Blog",
+    description: metaDescription,
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://askpally.de",
+      name: "AskPally",
+      description: metaDescription,
+    },
+    inLanguage: "de-DE",
+  }}
+>
+  <MainSection
+    title="Blog"
+    subTitle="Entdecken Sie die neuesten Entwicklungen bei AskPally, externe Berichte und Insights rund um kindgerechte KI und Bildung."
+    btnExists={false}
+  />
+
+  <section class="py-8 max-w-4xl mx-auto text-neutral-800 dark:text-neutral-200">
+    <div class="grid gap-8 md:grid-cols-2">
+      {sortedPosts.map((post) => (
+        <article class="border border-neutral-200 dark:border-neutral-700 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+          <a href={`/blog/${post.slug}`} class="block">
+            <img 
+              src={post.data.image} 
+              alt={post.data.title}
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="mb-3">
+                <span class="text-sm text-neutral-500 dark:text-neutral-400">
+                  {post.data.date.toLocaleDateString('de-DE', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}
+                </span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 line-clamp-2">
+                {post.data.title}
+              </h3>
+              <p class="text-neutral-600 dark:text-neutral-300 line-clamp-3">
+                {post.data.excerpt}
+              </p>
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+</MainLayout> 

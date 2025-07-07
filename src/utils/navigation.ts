@@ -26,6 +26,7 @@ export interface SocialLinks {
 export const navBarLinks: NavLink[] = [
   { name: "Startseite", url: "/" }, // Home
   { name: "Unsere Vision", url: "/unsere-vision" }, // Our Vision (updated)
+  { name: "Blog", url: "/blog" }, // Blog section
   { name: "Team & Kontakt", url: "/kontakt" }, // Team & Contact (updated)
 ];
 
@@ -34,9 +35,10 @@ export const footerLinks: FooterLinkSection[] = [
   {
     section: "AskPally",
     links: [
-      { name: "Über AskPally", url: "/ueber-askpally" },
-      { name: "Vorteile", url: "/ueber-askpally#vorteile" },
-      { name: "Für Eltern", url: "/fuer-eltern" },
+      { name: "Startseite", url: "/" },
+      { name: "Unsere Vision", url: "/unsere-vision" },
+      { name: "Blog", url: "/blog" },
+      { name: "Team & Kontakt", url: "/kontakt" },
     ],
   },
   {

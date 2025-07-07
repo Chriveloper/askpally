@@ -1,38 +1,39 @@
 {
-  "title": "Simple, Transparent Pricing",
-  "subTitle": "Boost efficiency with ScrewFast's clear, value-driven plans.",
-  "badge": "Best value",
-  "thirdOption": "Enterprise Solutions?",
-  "btnText": "Get a Custom Quote",
+  "title": "Faire Preise für alle neugierigen Entdecker",
+  "subTitle": "Für nur 79€ kommt Pally direkt zu euch nach Hause",
+  "badge": "Empfohlen",
 
   "starterKit": {
-    "name": "Starter Kit",
-    "description": "Best option for DIY projects",
+    "name": "AskPally",
+    "description": "Der perfekte Einstieg für neugierige Entdecker",
     "price": "79",
-    "cents": ".00",
-    "billingFrequency": "USD / monthly",
+    "cents": "00",
+    "billingFrequency": "einmalig",
     "features": [
-      "Key hardware tools",
-      "Access to guides & tutorials",
-      "Standard support"
+      "Alle Grundfunktionen",
+      "Kostenlose App für Eltern",
+      "Volle Kontrolle über Nutzungszeiten",
+      "Einsicht in Gesprächsverläufe",
+      "GOTS-zertifizierte Bio-Baumwolle"
     ],
-    "purchaseBtnTitle": "Get the Starter Kit",
-    "purchaseLink": "#"
+    "purchaseBtnTitle": "",
+    "purchaseLink": ""
   },
 
   "professionalToolbox": {
-    "name": "Professional Toolbox",
-    "description": "Best for large scale uses",
-    "price": "9",
-    "cents": ".00",
-    "billingFrequency": "USD / monthly",
+    "name": "AskPally+",
+    "description": "Mit Premium-Funktionen für optimale Förderung",
+    "price": "79",
+    "cents": "00",
+    "billingFrequency": "+ 5,99€/Monat",
     "features": [
-      "Premium tool selection",
-      "Priority support",
-      "Exclusive content & deals",
-      "Bulk order discounts"
+      "Alle Basic-Funktionen",
+      "Gesprächszusammenfassungen",
+      "Detaillierte Lernstatistiken",
+      "Erweiterte Elternkontrolle",
+      "Premium-Support"
     ],
-    "purchaseBtnTitle": "Get the Professional Toolbox",
-    "purchaseLink": "#"
+    "purchaseBtnTitle": "",
+    "purchaseLink": ""
   }
 }
