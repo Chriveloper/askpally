@@ -4,6 +4,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import DevelopmentNotice from "@components/sections/misc/DevelopmentNotice.astro";
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
 import heroImage from "@images/askpally.avif";
@@ -64,24 +65,14 @@ import security from "@images/security-image.avif";
     ]}
   />
 
-  <!-- Development notice before pricing -->
-  <div class="mx-auto max-w-2xl text-center px-4 py-8">
-    <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6">
-      <h3 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-2">
-        🚧 Entwicklung in vollem Gange
-      </h3>
-      <p class="text-blue-700 dark:text-blue-300">
-        AskPally befindet sich aktuell in der Entwicklungsphase. Die hier genannten Preise sind vorläufig und können sich noch ändern.
-      </p>
-    </div>
-  </div>
+  <DevelopmentNotice />
 
   <PricingSection pricing={pricing} />
 
   <FAQ 
     title="Häufig<br />gestellte Fragen" 
     faqs={{
-      subTitle: "Alles was Sie über AskPally wissen müssen",
+      subTitle: "Alles, was Sie über AskPally wissen müssen",
       faqs: [
         {
           question: "Wann wird AskPally verfügbar sein?",

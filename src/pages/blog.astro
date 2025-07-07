@@ -12,6 +12,8 @@ const ogTitle = "Blog | AskPally";
 // Get all blog posts and sort by date
 const blogPosts = await getCollection('blog');
 const sortedPosts = blogPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+
 ---
 
 <MainLayout
@@ -40,7 +42,7 @@ const sortedPosts = blogPosts.sort((a, b) => b.data.date.getTime() - a.data.date
     btnExists={false}
   />
 
-  <section class="py-8 max-w-4xl mx-auto text-neutral-800 dark:text-neutral-200">
+  <section class="py-8 max-w-4xl mx-auto">
     <div class="grid gap-8 md:grid-cols-2">
       {sortedPosts.map((post) => (
         <article class="border border-neutral-200 dark:border-neutral-700 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
@@ -60,7 +62,7 @@ const sortedPosts = blogPosts.sort((a, b) => b.data.date.getTime() - a.data.date
                   })}
                 </span>
               </div>
-              <h3 class="text-xl font-semibold mb-3 line-clamp-2">
+              <h3 class="text-xl font-semibold mb-3 line-clamp-2 text-neutral-800 dark:text-neutral-200">
                 {post.data.title}
               </h3>
               <p class="text-neutral-600 dark:text-neutral-300 line-clamp-3">
